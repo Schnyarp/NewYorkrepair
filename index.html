@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>newyork.repair — Premium Domain For Sale</title>
+  <meta name="description" content="newyork.repair — premium geo + category domain ideal for home repair services, local contractors, handyman marketplaces, plumbing/electrical franchises and local SEO. Submit an offer to purchase." />
+  <meta property="og:title" content="newyork.repair — Premium Domain For Sale" />
+  <meta property="og:description" content="newyork.repair — premium domain ideal for New York City-focused home repair services, contractor platforms, and local trades marketplaces. Contact domain@newyork.repair" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#2b4b63" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <style>
+    :root{
+      --max-width:980px;
+      --content-width:760px;
+      --panel: rgba(255,255,255,0.98);
+      --muted: #5f6f75;
+      --accent: #d94e32; /* repair/tool accent (orange) */
+      --accent-2: #ffd36b; /* warm highlight */
+      --text-dark: #07212a;
+      --radius:14px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:28px;
+      color:var(--text-dark);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+
+      /* Layered background to evoke NYC + home repair:
+         - dawn sky gradient
+         - subtle grain
+         - stylized skyline silhouette composed with multiple gradients
+         - scaffolding / scaffolding-like repeating pattern
+         - faint tool icons as decorative accents
+      */
+      background:
+        radial-gradient(1200px 600px at 10% 10%, rgba(255,210,140,0.06), transparent 10%),
+        linear-gradient(180deg, #f6fafc 0%, #e9f3f6 40%, #dfeaf0 100%);
+
+      background-attachment: fixed;
+    }
+
+    /* skyline: a set of rectangle silhouettes positioned across the bottom */
+    .skyline {
+      position:fixed;
+      left:0; right:0; bottom:0;
+      height:34vh;
+      pointer-events:none;
+      z-index:0;
+      background-image:
+        /* multiple building blocks using linear-gradients */
+        linear-gradient(#0f2b38 0 100%),
+        linear-gradient(#0f2b38 0 100%),
+        linear-gradient(#0f2b38 0 100%),
+        linear-gradient(#0f2b38 0 100%),
+        linear-gradient(#0f2b38 0 100%),
+        linear-gradient(#0f2b38 0 100%),
+        linear-gradient(#0f2b38 0 100%),
+        linear-gradient(#0f2b38 0 100%),
+        /* subtle scaffold stripes overlay */
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 8px);
+      background-size:
+        8% 60%, 6% 40%, 10% 75%, 5% 35%, 12% 85%, 7% 50%, 9% 65%, 6% 45%, 100% 100%;
+      background-position:
+        4% 40%, 12% 55%, 22% 20%, 33% 60%, 46% 8%, 60% 48%, 72% 30%, 84% 58%, 0 0;
+      background-repeat: no-repeat;
+      mix-blend-mode: multiply;
+      opacity:0.95;
+    }
+
+    /* subtle grain texture */
+    .grain {
+      position:fixed;
+      inset:0;
+      z-index:0;
+      pointer-events:none;
+      background-image: radial-gradient(circle, rgba(0,0,0,0.02) 0.6px, transparent 0.9px);
+      background-size: 18px 18px;
+      opacity:0.7;
+    }
+
+    /* tool-icon accents (wrench / hammer) - decorative, low-opacity */
+    .tools {
+      position:fixed;
+      inset:auto 10% 58% auto;
+      width:140px;
+      height:140px;
+      z-index:0;
+      opacity:0.06;
+      pointer-events:none;
+      background-image:
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g fill="none" stroke="%23000000" stroke-width="3"><path d="M44 4l16 16-12 12-16-16zM9 46c-3 3-3 8 0 11s8 3 11 0l25-25"/><path d="M29 35l-6 6"/></g></svg>');
+      background-size:contain;
+      background-repeat:no-repeat;
+      transform:rotate(-10deg);
+    }
+
+    .tools.tools-2 {
+      left:auto;
+      right:8%;
+      top:10%;
+      bottom:auto;
+      transform:rotate(6deg) scale(1.1);
+      opacity:0.05;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      padding:34px;
+      border-radius:18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.995), rgba(250,252,253,0.995));
+      box-shadow: 0 30px 80px rgba(6,18,24,0.18);
+      border: 1px solid rgba(6,18,24,0.04);
+      position:relative;
+      z-index:1;
+    }
+
+    header{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:22px;
+    }
+
+    .brand{ display:flex; gap:14px; align-items:center; }
+    .logo{
+      width:72px;
+      height:72px;
+      border-radius:12px;
+      background: linear-gradient(135deg,#123f4d,#1b6b74);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
+      font-size:20px;
+      box-shadow: 0 10px 30px rgba(11,47,61,0.12);
+      flex-shrink:0;
+    }
+
+    h1{ margin:0; font-size:26px; color:var(--text-dark); }
+    p.lead{ margin:6px 0 0; color:var(--muted); font-size:14px; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:26px;
+      align-items:start;
+    }
+
+    .hero {
+      background: linear-gradient(90deg, rgba(217,78,50,0.04), rgba(34,100,120,0.02));
+      padding:14px 16px;
+      border-radius:12px;
+      color:var(--accent);
+      margin-bottom:14px;
+      border:1px solid rgba(11,47,61,0.04);
+    }
+    .hero p{ margin:0; font-size:15px; color:var(--accent); }
+
+    .panel {
+      background: var(--panel);
+      color:var(--text-dark);
+      padding:22px;
+      border-radius:14px;
+      box-shadow: 0 8px 26px rgba(6,18,24,0.06);
+      border: 1px solid rgba(6,18,24,0.02);
+      max-width:var(--content-width);
+    }
+
+    h2{ margin-top:0; font-size:20px; color:var(--text-dark); }
+    .features ul{ margin:0; padding-left:18px; color:var(--muted); }
+    .features li{ margin-bottom:10px; }
+
+    .cta-row{ display:flex; gap:12px; margin-top:16px; flex-wrap:wrap; align-items:center; }
+    .btn{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding:10px 16px;
+      border-radius:999px;
+      font-weight:700;
+      cursor:pointer;
+      text-decoration:none;
+      border:0;
+    }
+    .btn-primary{
+      background: linear-gradient(90deg,var(--accent),var(--accent-2));
+      color:#071217;
+      box-shadow: 0 10px 30px rgba(217,78,50,0.12);
+    }
+    .btn-ghost{
+      background:transparent;
+      border:1px solid rgba(11,47,61,0.08);
+      color:var(--accent);
+    }
+
+    .price { margin-top:12px; font-weight:700; color:var(--text-dark); font-size:16px; }
+    .muted-small { color:var(--muted); font-size:13px; margin-top:6px; }
+
+    .contact-card{
+      position:sticky;
+      top:32px;
+      align-self:start;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.94));
+      padding:18px;
+      border-radius:12px;
+      border:1px solid rgba(6,18,24,0.03);
+      box-shadow: 0 8px 26px rgba(6,18,24,0.035);
+      max-width:360px;
+    }
+
+    .contact-card h3{ margin:0 0 8px 0; font-size:16px; color:var(--text-dark); }
+    .contact-email, .contact-email a{
+      white-space:nowrap;
+      display:inline-block;
+      font-weight:700;
+      color:var(--accent);
+      word-break: normal;
+      font-size:0.98rem;
+    }
+
+    form label{ display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+    form input, form textarea {
+      width:100%;
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid rgba(6,18,24,0.06);
+      background:#fff;
+      color:var(--text-dark);
+      font-size:14px;
+      margin-bottom:12px;
+    }
+    form textarea{ min-height:110px; resize:vertical; }
+
+    footer{ margin-top:18px; color:var(--muted); font-size:13px; text-align:center; }
+
+    @media (max-width:900px){
+      .grid{ grid-template-columns:1fr; gap:18px; }
+      .contact-card{ position:relative; top:auto; width:100%; max-width:none; }
+      .container{ padding:20px; }
+      .logo{ width:64px; height:64px; }
+      h1{ font-size:22px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "url":"https://newyork.repair",
+        "name":"newyork.repair",
+        "description":"newyork.repair — premium geo+category domain ideal for NYC-focused home repair businesses, contractor marketplaces, local trades platforms and neighborhood services."
+      },
+      {
+        "@type":"ContactPoint",
+        "contactType":"sales",
+        "email":"domain@newyork.repair"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="skyline" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="tools" aria-hidden="true"></div>
+  <div class="tools tools-2" aria-hidden="true"></div>
+
+  <main class="container" role="main" aria-labelledby="main-heading">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">NY</div>
+        <div>
+          <h1 id="main-heading">newyork.repair</h1>
+          <p class="lead">Premium domain for New York City-focused home repair, contractor platforms, and local trades marketplaces.</p>
+        </div>
+      </div>
+
+      <div style="text-align:right">
+        <div style="color:var(--muted);font-size:13px">For inquiries</div>
+        <div class="contact-email"><a href="mailto:domain@newyork.repair" style="color:inherit;text-decoration:none">domain@newyork.repair</a></div>
+      </div>
+    </header>
+
+    <div class="hero" role="note" aria-live="polite">
+      <p>
+        NewYork.repair combines a powerful locality with a clear service category — ideal for local trades brands, home services marketplaces, franchise rollouts, and neighborhood-focused marketing.
+      </p>
+    </div>
+
+    <section class="grid" aria-label="Main content">
+      <div>
+        <article class="panel" aria-labelledby="why-title">
+          <h2 id="why-title">Why newyork.repair?</h2>
+          <p class="lead">Clear, memorable and SEO-friendly — a strong fit for platforms and businesses that connect New Yorkers to vetted contractors, emergency repair services, HVAC/plumbing/electrical trades, and neighborhood service directories.</p>
+
+          <div class="features" style="margin-top:12px">
+            <ul>
+              <li>Geo + category exactness — immediate relevance for NYC audiences</li>
+              <li>Great for local marketplaces, franchise operations, lead-generation and service directories</li>
+              <li>Short, brandable and easy to market across offline and digital channels</li>
+            </ul>
+
+            <p style="margin-top:12px"><a href="https://corelli.com/domains.html" style="color:var(--accent)">How to Choose A Domain Name</a></p>
+          </div>
+
+          <div class="cta-row" role="group" aria-label="Actions">
+            <a class="btn btn-primary" href="#" id="inquireBtn">Make an Offer</a>
+            <a class="btn btn-ghost" href="mailto:domain@newyork.repair?subject=Domain%20Offer%20-%20newyork.repair">Email Now</a>
+          </div>
+
+          <div class="price">Domain: newyork.repair</div>
+          <div class="muted-small">Serious offers only. We recommend transfer via escrow for security and trust.</div>
+        </article>
+
+        <article class="panel" style="margin-top:18px" aria-labelledby="about-title">
+          <h3 id="about-title" style="margin-top:0">About this domain</h3>
+          <p class="lead">newyork.repair is well-suited for businesses building trust with local customers — from emergency repair networks and vetted contractor marketplaces to franchise rollouts and neighborhood trade directories.</p>
+
+          <ul style="color:var(--muted);margin-top:12px">
+            <li>Perfect for local SEO and neighborhood-targeted marketing</li>
+            <li>Works for lead-gen, booking platforms, service subscriptions and franchise models</li>
+            <li>Transfer-ready — we use escrow to ensure a safe and secure transaction</li>
+          </ul>
+        </article>
+      </div>
+
+      <aside class="contact-card" aria-label="Contact & offer">
+        <div>
+          <h3 style="margin-top:0">Contact & Offer</h3>
+          <p style="margin-top:6px;color:var(--muted)">Submit an offer — this form will open your email client with the details prefilled. Or email <a href="mailto:domain@newyork.repair" class="contact-email">domain@newyork.repair</a>.</p>
+
+          <form id="inquiryForm" onsubmit="handleSubmit(event)" aria-label="Domain offer form">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+            <label for="offer">Your offer (USD)</label>
+            <input id="offer" name="offer" type="text" placeholder="Enter your offer (USD)" required />
+
+            <label for="company">Company (optional)</label>
+            <input id="company" name="company" type="text" placeholder="Your company or organization" />
+
+            <label for="country">Country</label>
+            <input id="country" name="country" type="text" placeholder="Your country" required />
+
+            <label for="phone">Phone number (optional)</label>
+            <input id="phone" name="phone" type="tel" />
+
+            <label for="message">Message (questions, timeline, escrow preference)</label>
+            <textarea id="message" name="message" placeholder="Hi — I'm submitting an offer for newyork.repair. Please share transfer instructions and next steps."></textarea>
+
+            <button class="btn btn-primary" type="submit" style="width:100%; margin-top:6px">Send Offer</button>
+          </form>
+
+          <footer style="margin-top:10px; text-align:left; color:var(--muted); font-size:13px">
+            Prefer a direct email? <a href="mailto:domain@newyork.repair" style="color:var(--accent)" class="contact-email">domain@newyork.repair</a>
+          </footer>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      &copy; 2025 newyork.repair. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    // Compose a mailto: URL from form contents to open the user's email client.
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const offer = document.getElementById('offer').value.trim();
+      const company = document.getElementById('company').value.trim();
+      const country = document.getElementById('country').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent('Domain Offer - newyork.repair');
+      const bodyText =
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Company: ${company || '(not provided)'}\n` +
+        `Offer (USD): ${offer}\n` +
+        `Country: ${country}\n` +
+        `Phone: ${phone || '(not provided)'}\n\n` +
+        `Message:\n${message}\n\n---\nSent from newyork.repair offer form`;
+
+      const body = encodeURIComponent(bodyText);
+      const mailto = `mailto:domain@newyork.repair?subject=${subject}&body=${body}`;
+      window.location.href = mailto;
+    }
+
+    document.getElementById('inquireBtn').addEventListener('click', function(e){
+      e.preventDefault();
+      const form = document.getElementById('inquiryForm');
+      if(window.innerWidth < 900){
+        form.scrollIntoView({behavior:'smooth', block:'center'});
+        form.querySelector('input').focus();
+      } else {
+        const subject = encodeURIComponent('Domain Offer - newyork.repair');
+        const body = encodeURIComponent('Hi — I would like to make an offer for newyork.repair. Please reply with transfer instructions and next steps.');
+        window.location.href = `mailto:domain@newyork.repair?subject=${subject}&body=${body}`;
+      }
+    });
+  </script>
+</body>
+</html>
